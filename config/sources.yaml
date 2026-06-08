@@ -1,0 +1,28 @@
+sources:
+  facebook_marketplace:
+    name: Facebook Marketplace
+    enabled: true
+    priority: 1
+    requires_login: true
+    base_url: https://www.facebook.com/marketplace
+    search_url_template: "https://www.facebook.com/marketplace/{location}/search/?query={keyword}&radius={radius}"
+    scraper_class: FacebookScraper
+    notes: Main priority source. Requires Playwright + FB session.
+
+  craigslist:
+    name: Craigslist
+    enabled: false
+    priority: 2
+    requires_login: false
+    base_url: https://craigslist.org
+    search_url_template: "https://{city}.craigslist.org/search/hea?query={keyword}"
+    scraper_class: CraigslistScraper
+    notes: City-by-city search. No login needed.
+
+  mock:
+    name: Mock Data Generator
+    enabled: true
+    priority: 99
+    requires_login: false
+    scraper_class: MockScraper
+    notes: Used for demo/testing only. Generates realistic fake data.

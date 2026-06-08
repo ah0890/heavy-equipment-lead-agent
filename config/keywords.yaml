@@ -1,0 +1,99 @@
+inclusion:
+  main:
+    - excavator
+    - wheel loader
+    - dozer
+    - bulldozer
+    - motor grader
+    - compactor
+    - wheel excavator
+    - crawler loader
+    - construction equipment
+    - heavy equipment
+    - used machinery
+
+  brand_based:
+    - CAT excavator
+    - Caterpillar excavator
+    - Komatsu excavator
+    - Hitachi excavator
+    - John Deere excavator
+    - Kobelco excavator
+    - Volvo excavator
+    - Doosan excavator
+    - Hyundai excavator
+    - CAT dozer
+    - Komatsu dozer
+    - CAT wheel loader
+    - Komatsu wheel loader
+    - Hamm roller
+    - Dynapac roller
+    - Bomag roller
+    - Sakai roller
+
+exclusion:
+  - toy
+  - attachment
+  - bucket only
+  - forks only
+  - parts only
+  - tires only
+  - rental only
+  - wanted
+  - looking for
+  - manual
+  - brochure
+  - model toy
+
+# These are excluded unless explicitly enabled in the search config
+conditional_exclusion:
+  - mini
+  - compact
+
+known_brands:
+  - CAT
+  - Caterpillar
+  - Komatsu
+  - Hitachi
+  - John Deere
+  - Kobelco
+  - Volvo
+  - Doosan
+  - Hyundai
+  - Liebherr
+  - Case
+  - JCB
+  - Kubota
+  - Hamm
+  - Dynapac
+  - Bomag
+  - Sakai
+  - Terex
+  - Manitowoc
+
+equipment_types:
+  excavator:
+    - excavator
+    - trackhoe
+    - backhoe excavator
+  loader:
+    - wheel loader
+    - crawler loader
+    - front loader
+    - payloader
+  dozer:
+    - dozer
+    - bulldozer
+    - crawler dozer
+  grader:
+    - motor grader
+    - grader
+  compactor:
+    - compactor
+    - roller
+    - vibratory roller
+    - drum roller
+  other:
+    - construction equipment
+    - heavy equipment
+    - used machinery

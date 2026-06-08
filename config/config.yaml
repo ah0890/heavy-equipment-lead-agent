@@ -1,0 +1,76 @@
+app:
+  name: Heavy Equipment Lead Agent
+  version: 1.0.0
+  mode: demo  # override with APP_MODE env var
+
+scraper:
+  min_delay: 2
+  max_delay: 5
+  max_listings_per_search: 50
+  headless: false
+  timeout_ms: 30000
+  retry_attempts: 3
+
+search:
+  default_radius_miles: 100
+  default_condition: used
+  default_listing_age: "7"
+  default_price_max: 150000
+  default_price_min: 5000
+
+  locations:
+    - city: Houston
+      state: TX
+      country: USA
+      radius: 100
+      active: true
+    - city: Dallas
+      state: TX
+      country: USA
+      radius: 100
+      active: true
+    - city: Phoenix
+      state: AZ
+      country: USA
+      radius: 100
+      active: true
+    - city: Atlanta
+      state: GA
+      country: USA
+      radius: 100
+      active: true
+    - city: Chicago
+      state: IL
+      country: USA
+      radius: 100
+      active: true
+
+lead_scoring:
+  high_priority_max_price: 50000
+  weights:
+    has_price: 10
+    price_under_threshold: 20
+    has_seller_contact: 15
+    has_phone: 20
+    has_description: 10
+    has_photos: 10
+    is_dealer: 5
+    is_recent: 15
+    full_details: 10
+    running_condition_mentioned: 10
+
+deduplication:
+  url_match_weight: 100
+  title_similarity_threshold: 85
+  combined_threshold: 70
+
+reporting:
+  output_dir: data/reports
+  include_rejected: false
+  max_best_leads: 10
+
+google_sheets:
+  tabs:
+    all_leads: All Leads
+    high_priority: High Priority
+    daily_summary: Daily Summary
